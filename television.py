@@ -15,3 +15,10 @@ class Television:
             self.status = False
         else:
             self.status = True
+
+    def mute(self):
+        if self.muted:
+            self.muted = False
+        else:
+            self.muted = True
+
