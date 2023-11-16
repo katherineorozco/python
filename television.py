@@ -5,20 +5,35 @@ class Television:
     MAX_CHANNEL = 3
 
     def __init__(self):
-        self.status = False
-        self.muted = False
-        self.volume = Television.MIN_VOLUME
-        self.channel = Television.MIN_CHANNEL
+        self.__status = False
+        self.__muted = False
+        self.__volume = Television.MIN_VOLUME
+        self.__channel = Television.MIN_CHANNEL
 
     def power(self):
-        if self.status:
-            self.status = False
+        if self.__status:
+            self.__status = False
         else:
-            self.status = True
+            self.__status = True
 
     def mute(self):
-        if self.muted:
-            self.muted = False
+        if self.__muted:
+            self.__muted = False
         else:
-            self.muted = True
+            self.__muted = True
 
+    def channel_up(self):
+        pass
+
+    def channel_down(self):
+        if self.__status:
+            if self.__channel > Television.MIN_CHANNEL:
+                self.__channel -= 1
+            else:
+                self.__channel = Television.MAX_CHANNEL
+
+    def volume_up(self):
+        if self.__status:
+            self.muted = False
+            if self.__volume < Television.MAX_VOLUME:
+                self.__volume += 1
