@@ -9,3 +9,9 @@ class Television:
         self.muted = False
         self.volume = Television.MIN_VOLUME
         self.channel = Television.MIN_CHANNEL
+
+    def power(self):
+        if self.status:
+            self.status = False
+        else:
+            self.status = True
