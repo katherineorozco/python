@@ -22,7 +22,7 @@ class Television:
         else:
             self.__muted = True
 
-    def channel_up(self): 
+    def channel_up(self):
         if self.__status:
             if self.__channel > Television.MAX_CHANNEL:
                 self.__channel += 1
@@ -48,5 +48,7 @@ class Television:
             if self.__volume > Television.MIN_VOLUME:
                 self.__volume -= 1
 
+    def __str__(self):
+        return f"Power = [{self.__status}], Channel = [{self.__channel}], Volume = [{self.__volume}]"
 
 
