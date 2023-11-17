@@ -78,6 +78,6 @@ class Television:
         Returns a string representation of the television's status.
         """
         if self.__muted:
-            return f"Power = [{self.__status}], Channel = [{self.__channel}], Volume = [{Television.MIN_VOLUME}]"
+            return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {Television.MIN_VOLUME}"
         else:
-            return f"Power = [{self.__status}], Channel = [{self.__channel}], Volume = [{self.__volume}]"
+            return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}"
