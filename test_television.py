@@ -17,7 +17,7 @@ class Test:
         assert self.tv.__str__() == "Power = True, Channel = 0, Volume = 0"
         self.tv.power()
         assert self.tv.__str__() == "Power = False, Channel = 0, Volume = 0"
-        
+
     def test_mute(self):
         self.tv.power()
         assert self.tv.__str__() == "Power = True, Channel = 0, Volume = 0"
